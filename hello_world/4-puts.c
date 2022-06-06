@@ -1,10 +1,15 @@
 #include <stdio.h>
 
+/**
+* main - prints specified string
+*
+*
+*
+*Return: 0
+*/
+
 int main(void)
-
-/* Prints specified string */
-
 {
 puts("\"Programming is like building a multilingual puzzle");
-return(0);
+return (0);
 }
