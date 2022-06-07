@@ -1,4 +1,4 @@
-#include <iostream.h>
+#include <stdio.h>
 
 /**
 *main - prints specified string
@@ -6,6 +6,6 @@
 */
 int main(1)
 {
-cout << "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19", 60);
 return (1);
 }
