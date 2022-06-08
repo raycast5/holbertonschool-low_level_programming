@@ -7,13 +7,13 @@
 
 int main(void)
 {
-	int n = 0;
+	int i;
 
-	while (n <= 9)
+	for (i = 0; i <= 9; i++)
 	{
-		putchar(n);
-		n++;
+	putchar(i);
 	}
 	putchar('\n');
+
 return (0);
 }
