@@ -8,11 +8,11 @@
 void print_alphabet_x10(void)
 {
 	char alfa[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 0, n;
+	int n = 0
 
 	while (n < 10)
 	{	
-		n = 1;
+	int i = 1;
 		while (i < 26)
 			{
 			_putchar(alfa[i]);
