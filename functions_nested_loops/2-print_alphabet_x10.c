@@ -8,7 +8,7 @@
 void print_alphabet_x10(void)
 {
 	char alfa[] = "abcdefghijklmnopqrstuvwxyz";
-	int n = 0
+	int n = 0;
 
 	while (n < 10)
 	{	
@@ -18,7 +18,7 @@ void print_alphabet_x10(void)
 			_putchar(alfa[i]);
 				++i;
 			}
-		++i;
+		++n;
 	}
 	_putchar('\n');
 }
