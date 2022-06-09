@@ -2,7 +2,7 @@
 
 /**
 * _islower - determines if c is lowercase
-* c - is char
+* @c: the character to be categorized
 * Return: 1 if c is lowercase, 0 if otherwise.
 */
 
