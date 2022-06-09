@@ -7,8 +7,18 @@
 
 void print_alphabet_x10(void)
 {
-	int i;
-	
-	for (i = 1; i < 10; ++i)
-		print_alphabet();
+	char alfa[] = "abcdefghijklmnopqrstuvwxyz";
+	int i = 0;
+	int n = 0;
+
+	while (n < 10)
+	{
+		while (i < 26)
+			{
+			_putchar(alfa[i]);
+				++i;
+			}
+		++i;
+	}
+	_putchar('\n');
 }
