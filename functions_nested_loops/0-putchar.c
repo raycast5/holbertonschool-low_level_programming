@@ -5,7 +5,7 @@
 *Return: Always 0 (Success)
 */
 
-int main()
+int main(void)
 {
 	char str[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int i = 0;
