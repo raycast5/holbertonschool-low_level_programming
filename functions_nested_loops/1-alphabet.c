@@ -8,7 +8,7 @@
 void print_alphabet(void)
 {
 	char alfa[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 0;	
+	int i = 0;
 		while (i < 26)
 		{
 		_putchar(alfa[i]);
