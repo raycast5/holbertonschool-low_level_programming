@@ -5,7 +5,7 @@
 *Return: Always 0 (Success)
 */
 
-int main((void))
+int mast(void)
 {
 	char str[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int i = 0;
