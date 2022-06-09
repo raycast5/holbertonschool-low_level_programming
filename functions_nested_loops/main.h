@@ -11,4 +11,4 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-extern int _putchar
+extern int _putchar;
