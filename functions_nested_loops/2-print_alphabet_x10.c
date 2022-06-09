@@ -11,14 +11,15 @@ void print_alphabet_x10(void)
 	int n = 0;
 
 	while (n < 10)
-	{	
-	int i = 1;
+	{
+	int i = o;
 		while (i < 26)
 			{
 			_putchar(alfa[i]);
 				++i;
 			}
+
+	_putchar('\n');
 		++n;
 	}
-	_putchar('\n');
 }
