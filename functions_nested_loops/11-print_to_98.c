@@ -23,14 +23,14 @@ void print_to_98(int n)
 		{
 			printf("%d, ", n);
 			if (n == 97)
-			{	
+			{
 				printf("98\n");
 			}
 		}
 	}
 	else
 	{
-		printf("%d\n",n);
+		printf("%d\n", n);
 	}
 
 }
