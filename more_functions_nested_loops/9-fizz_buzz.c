@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints 1-100, prints "Fizz" for multiples of 3, "Buzz" for multiples of 5, "FizzBuzz" for both
+ * main - prints 1-100, prints "Fizz" for multiples of 3, "Buzz" for multiples of 5
+ * "FizzBuzz" for both
  *
  * Return: Always 0
  */
@@ -21,7 +22,14 @@ int main(void)
 		}
 		else if ((i % 5) == 0)
 		{
-			printf("Buzz ");
+			if (i == 100)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("Buzz ");
+			}
 		}
 		else
 		{
