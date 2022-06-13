@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints 1-100, prints "Fizz" for multiples of 3, "Buzz" 
+ * main - prints 1-100, prints "Fizz" for multiples of 3, "Buzz"
  * for multiples of 5 "FizzBuzz" for both
  *
  * Return: Always 0
