@@ -17,7 +17,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for(j = 0; j <= length; j++)
 		{
-			if (haystack[i + 2] == needle[j])
+			if (haystack[i + j] == needle[j])
 			{
 				count ++;
 			}
