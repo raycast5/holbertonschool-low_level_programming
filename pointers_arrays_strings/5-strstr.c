@@ -9,8 +9,8 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j, length;
-	int count = 1;
-
+	int count = 0;
+	
 	for (length = 0; needle[length] != '\0'; length++)
 	{
 	}
@@ -18,15 +18,15 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for(j = 0; j < length; j++)
 		{
-			if (haystack[i] == needle[j])
+			if (haystack[i + 1] == needle[j])
 			{
 				count++;
 			}
 			if (count == length)
 			{
-			return (haystack + i);
+				return (haystack + i);
 			}
 		}
 	}
-return 0;
+return (0);
 }
