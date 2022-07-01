@@ -52,7 +52,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nd = malloc(sizeof(dog_t));
 	if (nd == NULL)
 	{
-		free(nd);
+		free(nd->owner);
+		free(nd->name);
 		return (NULL);
 	}
 	nd->name = clonestr(name);
