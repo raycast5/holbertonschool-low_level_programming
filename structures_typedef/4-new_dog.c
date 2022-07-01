@@ -22,7 +22,6 @@ char *clonestr(char *s1)
 		s2 = malloc(sizeof(char) * len1 + 1);
 			if (s1 == NULL)
 			{
-				free(s1);
 				return (NULL);
 			}
 		for (i = 0; i <= len1; i++)
@@ -58,7 +57,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nd->name = clonestr(name);
 	if (nd->name == NULL)
 	{
-		free(s2);
 		free(nd);
 		return (NULL);
 	}
@@ -68,8 +66,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (nd->owner == NULL)
 	{
-		free(s2);
-		free(nd->name);
 		free(nd);
 		return (NULL);
 	}
