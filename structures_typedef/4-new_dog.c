@@ -50,7 +50,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *nd;
 
 	nd = malloc(sizeof(dog_t));
-
+	if (nd == NULL)
+	{
+		return (NULL);
+	}
 	nd->name = clonestr(name);
 	if (nd->name == NULL)
 	{
