@@ -23,4 +23,6 @@ dog_t *new_dog(char *name, float age, char *owner);
 
 char *clonestr(char *s1);
 
+void free_dog(dog_t *d);
+
 #endif
