@@ -19,7 +19,7 @@ char *clonestr(char *s1)
 		for (len1 = 0; s1[len1]; len1++)
 		{
 		}
-		s2 = malloc(sizeof(char) * len1);
+		s2 = malloc(sizeof(char) * len1 + 1);
 			if (s1 == NULL)
 			{
 				free(s1);
