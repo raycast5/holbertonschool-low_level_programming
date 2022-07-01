@@ -45,16 +45,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(nd);
 		return (NULL);
 	}
-	nd->name = _strcopy(nd->name, name);
-
-	nd->age = age;
 	nd->name = malloc(sizeof(name) + 1);
 	if (!nd->owner)
 	{
 		free(nd->name);
 		free(nd);
-		return (NULL);
 	}
+	nd->age = age;
+	nd->name = _strcopy(nd->name, name);
 	nd->owner = _strcopy(nd->owner, owner);
 
 return (nd);
