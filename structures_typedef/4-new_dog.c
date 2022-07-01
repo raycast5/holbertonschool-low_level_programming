@@ -54,14 +54,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nd->name = clonestr(name);
 	if (nd->name == NULL)
 	{
-		free(nd->name);
+		free(nd);
 		return (NULL);
 	}
 	nd->age = age;
 	nd->owner = clonestr(owner);
 	if (nd->owner == NULL)
 	{
-		free(nd->owner);
+		free(nd->name);
 		free(nd);
 	}
 	return (nd);
