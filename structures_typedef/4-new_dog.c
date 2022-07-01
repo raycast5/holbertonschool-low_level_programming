@@ -3,38 +3,23 @@
 #include <stdlib.h>
 
 /**
- * clonestr - clones string
+ * _strcopy - copies string
  *
- * @s1: string to be copied
- * Return: s2
+ * @src: string to be copied
+ * @dest: copied string
+ * Return: @dest
  */
 
-char *clonestr(char *s1)
+char *_strcopy(char *dest, char *src)
 {
-	int i, len1;
-	char *s2;
+	int i;
 
-	if (s1 != NULL)
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		for (len1 = 0; s1[len1]; len1++)
-		{
-		}
-		s2 = malloc(sizeof(char) * len1 + 1);
-			if (s1 == NULL)
-			{
-				free(s1);
-				return (NULL);
-			}
-		for (i = 0; i <= len1; i++)
-		{
-			s2[i] = s1[i];
-		}
-	return (s2);
+		dest[i] = src[i];
 	}
-	else
-	{
-		return (NULL);
-	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 /**
@@ -50,23 +35,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *nd;
 
 	nd = malloc(sizeof(dog_t));
-	if (nd == NULL)
+	if (!nd)
 	{
 		return (NULL);
 	}
-	nd->name = clonestr(name);
-	if(nd->name == NULL)
+	nd->name = malloc(sizeof(name) + 1);
+	if (!nd->name)
 	{
 		free(nd);
 		return (NULL);
 	}
+	nd->name = _strcopy(nd->name, name);
+
 	nd->age = age;
-	nd->owner = clonestr(owner);
-	if(nd->owner == NULL)
+	nd->name = malloc(sizeof(name) + 1);
+	if (!nd->owner)
 	{
 		free(nd->name);
 		free(nd);
 		return (NULL);
 	}
+	nd->owner = _strcopy(nd->owner, owner);
+
 return (nd);
 }
