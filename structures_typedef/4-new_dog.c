@@ -58,6 +58,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nd->name = clonestr(name);
 	if (nd->name == NULL)
 	{
+		free(s2);
 		free(nd);
 		return (NULL);
 	}
@@ -67,6 +68,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (nd->owner == NULL)
 	{
+		free(s2);
 		free(nd->name);
 		free(nd);
 		return (NULL);
