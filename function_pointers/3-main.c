@@ -14,24 +14,24 @@
 int main(int argc, char *argv[])
 {
 	int (*ptr)(int, int);
-	(void)int result, a, b;
+	int result, a, b;
 
-	/*if (argc != 3)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (((strcmp(argv[2], "/") == 0) || (strcmp(argv[2], "%") == 0)) && (argv[3] == 0))
+	if (((strcmp(argv[2], "/") == 0) || (strcmp(argv[2], "%") == 0))
+			&& (atoi(argv[3]) == 0))
 	{
 		printf("Error\n");
 		exit(100);
-	}*/
+	}
 	ptr = get_op_func(argv[2]);
-	printf("%lu\n", ptr);
-	/*if (ptr != NULL)
+	if (ptr != NULL)
 	{
 		a = atoi(argv[1]);
-		b = atoi(argv[2]);
+		b = atoi(argv[3]);
 		result = ptr(a, b);
 		printf("%d\n", result);
 	}
@@ -39,6 +39,6 @@ int main(int argc, char *argv[])
 	{
 	printf("Error\n");
 		exit(99);
-	}*/
+	}
 return (0);
 }
