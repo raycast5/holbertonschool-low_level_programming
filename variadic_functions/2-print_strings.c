@@ -3,24 +3,29 @@
 #include <stdio.h>
 
 /**
- * print_numbers - prints given int arguments
+ * print_strings - prints strings
  *
  * @separator: separator string
  * @n: number of arguments
  * Return: sum of all arguments
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	unsigned int x = n - 1;
+	unsigned int i, x = n - 1;
+	char *str;
 	va_list args;
 
 	va_start(args, n);
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(args, int));
+		str = va_arg(args, char *);
+		printf("%s", str);
+		if (str == NULL)
+		{
+			printf("nil");
+		}
 		if (separator != NULL && i < x)
 		{
 			printf("%s", separator);
