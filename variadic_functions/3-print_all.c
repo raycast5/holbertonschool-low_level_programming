@@ -11,39 +11,39 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int ival, i = 0;
+	int i = 0, x = 0;
 	char *sval;
-	char *ftyp = (char *)format;
-	float fval;
-	char cval;
 
 	va_start(ap, format);
-	while (ftyp[i])
+	while (format && format[i])
 	{
-		switch (ftyp[i])
+		if (x == 1)
+		{
+			printf(", ");
+		}
+		x = 1;
+		switch (format[i])
 		{
 			case 'c':
-				cval = va_arg(ap, int);
-				printf("%c", cval);
+				printf("%c", va_arg(ap, int));
 				break;
 			case 'i':
-				ival = va_arg(ap, int);
-				printf("%d", ival);
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
-				fval = va_arg(ap, double);
-				printf("%f", fval);
+				printf("%f", va_arg(ap, double));
 				break;
-		}
-		if (ftyp[i] == 's')
-		{
-			sval = va_arg(ap, char *);
-			if (!sval)
-			{
-			printf("(nil)");
-			break;
-			}
-			printf("%s", sval);
+			case 's':
+				sval = va_arg(ap, char *);
+					if (!sval)
+					{
+						printf("(nil)");
+						break;
+					}
+				printf("%s", sval);
+				break;
+			default:
+				x = 2;
 		}
 	i++;
 	}
