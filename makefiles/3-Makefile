@@ -5,10 +5,9 @@ OBJ = $(SRC:.c=.o)
 RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-clean: $(NAME)
-	$(RM) ~*  *.swap $(NAME)
-oclean: $(OBJ)
+clean:
+	$(RM) *~ $(NAME)
+oclean:
 	$(RM) $(OBJ)
-fclean:
-	$(RM) ~* *.swap $(OBJ) $(NAME)
-
+fclean: oclean clean
+re: oclean all
