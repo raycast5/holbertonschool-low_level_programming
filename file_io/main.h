@@ -9,7 +9,7 @@ int append_text_to_file(const char *filename, char *text_content);
 
 int _putchar(char c);
 
-
+int copy_content(const char *file_from, const char *file_to);
 
 
 
