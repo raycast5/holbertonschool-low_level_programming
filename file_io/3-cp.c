@@ -75,7 +75,7 @@ int main(int argc, char **argv)
 	}
 	if (res == 100)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
+		dprintf(STDERR_FILENO, "Error: Can't close fd");
 		exit(100);
 	}
 return (0);
