@@ -15,7 +15,7 @@
 
 int copy_content(const char *file_from, const char *file_to)
 {
-	int fd1, fd2;
+	int fd1, fd2, res1, res2, res3;
 	char buf[1024];
 	ssize_t count;
 
@@ -33,15 +33,15 @@ int copy_content(const char *file_from, const char *file_to)
 		if (count == -1)
 			return (98);
 
-		write(fd2, buf, count);
-		if (errno == -1)
+		res1 = write(fd2, buf, count);
+		if (res1 == -1)
 			return (99);
 	}
-	close(fd1);
-	if (errno == -1)
+	res2 = close(fd1);
+	if (res2 == -1)
 		return (100);
-	close(fd2);
-	if (errno == -1)
+	res3 = close(fd2);
+	if (res3 == -1)
 		return (100);
 return (0);
 }
