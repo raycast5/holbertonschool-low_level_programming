@@ -39,16 +39,10 @@ int copy_content(const char *file_from, const char *file_to)
 	}
 	close(fd1);
 	if (errno == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1);
-		exit(100);
-	}
+		return (100);
 	close(fd2);
 	if (errno == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2);
-		exit(100);
-	}
+		return (100);
 return (0);
 }
 
@@ -76,8 +70,13 @@ int main(int argc, char **argv)
 	}
 	if (res == 99)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
+	}
+	if (res == 100)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
+		exit(100);
 	}
 return (0);
 }
