@@ -11,6 +11,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int i, flag;
 	hash_node_t *current = NULL;
 
+	if (!ht)
+		exit(EXIT_FAILURE);
+
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
@@ -21,7 +24,7 @@ void hash_table_print(const hash_table_t *ht)
 			while (current)
 			{
 				printf("'%s': '%s'", current->key, current->value);
-				if (current->next)
+				if (current->next != NULL)
 				{
 					printf(", ");
 					flag = 1;
