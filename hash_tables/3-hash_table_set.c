@@ -17,7 +17,7 @@ const char *key, const char *value)
 
 	if (!key || !ht)
 		return (0);
-	
+
 	keycopy = strdup(key);
 	idx = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[idx];
