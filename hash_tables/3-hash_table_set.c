@@ -13,11 +13,12 @@ const char *key, const char *value)
 {
 	unsigned long int idx;
 	hash_node_t *new = NULL, *current = NULL;
-	char *keycopy = (char *)key;
+	char *keycopy;
 
 	if (!key || !ht)
 		return (0);
-
+	
+	keycopy = strdup(key);
 	idx = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[idx];
 
