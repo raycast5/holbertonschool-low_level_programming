@@ -13,6 +13,7 @@ const char *key, const char *value)
 {
 	unsigned long int idx;
 	hash_node_t *new = NULL;
+	char *data = (char *)value;
 
 	if (!key)
 		return (0);
@@ -24,7 +25,7 @@ const char *key, const char *value)
 		return (0);
 
 	new->key = (char *)key;
-	new->value = (char *)value;
+	new->value = data;
 	new->next = NULL;
 
 	if (ht->array[idx])
