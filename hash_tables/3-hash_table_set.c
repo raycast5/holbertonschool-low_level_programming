@@ -13,8 +13,9 @@ const char *key, const char *value)
 {
 	unsigned long int idx;
 	hash_node_t *new = NULL, *current = NULL;
+	char *keycopy = (char *)key;
 
-	if (!key || !*key)
+	if (!key || !ht)
 		return (0);
 
 	idx = key_index((const unsigned char *)key, ht->size);
@@ -34,10 +35,10 @@ const char *key, const char *value)
 	if (!new)
 		return (0);
 
-	new->key = (char *)key;
+	new->key = keycopy;
 	new->value = strdup(value);
 	new->next = NULL;
-	if (current)
+	if (ht->array[idx])
 	{
 		new->next = ht->array[idx];
 		ht->array[idx] = new;
